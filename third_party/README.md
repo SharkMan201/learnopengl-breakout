@@ -1,0 +1,1 @@
+This file contains all of the installed 3rd party libraries, it is added as prefix path for CMake to search for packages, you can add installed packages here instead of having them in your system.
