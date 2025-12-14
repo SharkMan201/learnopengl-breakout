@@ -14,8 +14,8 @@ Game::Game(unsigned int width, unsigned int height)
 Game::~Game() {}
 
 void Game::Init() {
-  ResourceManager::LoadShader("core/shaders/sprite.vs",
-                              "core/shaders/sprite.fs", nullptr, "sprite");
+  ResourceManager::LoadShader(SHADER_PATH "/sprite.vs",
+                              SHADER_PATH "/sprite.fs", nullptr, "sprite");
   glm::mat4 projection =
       glm::ortho(0.0f, static_cast<float>(width), static_cast<float>(height),
                  0.0f, -1.0f, 1.0f);
@@ -25,7 +25,7 @@ void Game::Init() {
 
   renderer = new SpriteRenderer(*shader);
 
-  ResourceManager::LoadTexture("core/textures/awesomeface.png", true, "face");
+  ResourceManager::LoadTexture(TEXTURE_PATH "/awesomeface.png", true, "face");
 }
 
 void Game::Update(float dt) {}
